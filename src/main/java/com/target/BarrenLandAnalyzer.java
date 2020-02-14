@@ -32,7 +32,7 @@ public class BarrenLandAnalyzer {
 		}
 		for(int[] barrenAreaCoord : barrenRectangleCoordinates) {
 			if(isNotIn(barrenAreaCoord[0], barrenAreaCoord[1]) || isNotIn(barrenAreaCoord[2], barrenAreaCoord[3])) {
-				throw new IllegalArgumentException("bottom left and top right coordinates must be within [0, 0] and ["+height+", " + width + "]");
+				throw new IllegalArgumentException("bottom left and top right coordinates must be within [0, 0] and ["+ (height - 1) +", " + (width - 1) + "]");
 			}
 			if(barrenAreaCoord[2] < barrenAreaCoord[0] || barrenAreaCoord[3] < barrenAreaCoord[1]) {
 				throw new IllegalArgumentException("Invalid coordinates " + Arrays.toString(barrenAreaCoord));
