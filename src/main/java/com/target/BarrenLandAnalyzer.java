@@ -71,6 +71,8 @@ public class BarrenLandAnalyzer {
 					.map(String::valueOf)
 					.collect(Collectors.joining(" "));
 			System.out.println(output);
+		} catch(Exception e) {
+			System.out.println("Error: " + e.getMessage());
 		}
 	}
 	
